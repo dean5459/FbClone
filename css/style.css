@@ -27,6 +27,7 @@ nav {
     width: 100%;
     padding: 8px;
     margin: auto;
+    z-index: 2;
 }
 
 .logo {
@@ -202,14 +203,14 @@ header {
 .header-nav a:active {
     background-color: #363636;
     color: #008fd1;
-    border-bottom: 5px solid #008fd1;
+    border-bottom: 4px solid #008fd1;
     border-radius: 0;
 }
 
 #active {
     background-color: #363636;
     color: #008fd1;
-    border-bottom: 5px solid #008fd1;
+    border-bottom: 4px solid #008fd1;
     border-radius: 0;
 }
 
@@ -267,4 +268,140 @@ a.more:active {
 
 .more-pos:hover .dropdown-content {
     display: block;
+}
+/*Aside*/
+main {
+    background-color: #1c1c1c;
+    padding: 14px;
+}
+aside {
+    width: 40%;
+}
+/*Intro*/
+.intro {
+    background-color: #363636;
+    border-radius: 10px;
+    padding: 12px 15px 8px;
+    color: #e6e6e6;
+}
+
+.intro h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.intro p {
+    margin: 1.2em 0;
+}
+
+.intro a {
+    color: #008fd1;
+    text-decoration: none;
+}
+
+.intro div {
+    width: 100%;
+    background-color: #4a4a4a;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 700;
+    padding: 8px;
+    margin: 10px 0 14px 0;
+}
+
+.intro div:hover {
+    background-color: #595959;
+}
+/*Photos*/
+.photos {
+    background-color: #363636;
+    border-radius: 10px;
+    padding: 12px 15px 8px;
+    margin: 14px 0;
+    color: #e6e6e6;
+}
+
+.photos-head {
+    padding-bottom: 10px;
+}
+
+.photos .h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.see-all {
+    float: right;
+    font-size: 1.2em;
+    padding: 5px;
+    color: #008fd1;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(3,1fr);  
+    grid-gap: 5px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0 14px 0;
+    overflow: hidden;
+}
+
+.grid-img {
+    width: 100%;
+    grid-column: span 1;
+}
+
+.see-all:hover {
+    background-color: #4a4a4a;
+}
+/*Friends*/
+.friends {
+    background-color: #363636;
+    border-radius: 10px;
+    padding: 12px 15px 8px;
+    margin: 14px 0;
+    color: #e6e6e6;
+}
+
+.friends .h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.friends h5 {
+    margin: 0;
+    font-weight: 400;
+    padding: 6px 0;
+    font-size: 1.0em;
+}
+
+.friends .photos-head {
+    padding-bottom: 0;
+}
+
+.friend-box {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.friend {
+    width: calc(33% - 9px);
+    margin: 5px;
+}
+
+.friend img {
+    max-width: 100%;
+    border-radius: 7px;
+}
+
+.friend p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight:700;
+    font-size: 0.85em;
 }
