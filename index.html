@@ -11,17 +11,24 @@
     </head>
     <body>
         <nav>
-            <span class="logo"><i class="fab fa-facebook-f"></i></span>
-            <input type="text" placeholder="&#xf002; Search Facebook">
-            <span class="nav-menu"><i class="fas fa-home"></i></span>
-            <span class="nav-menu"><i class="fas fa-user-friends"></i></span>
-            <span class="nav-menu"><i class="fab fa-youtube"></i></span>
-            <span class="nav-menu"><i class="fas fa-store"></i></span>
-            <span class="nav-menu"><i class="fas fa-users"></i></span>
-            <span class="nav-icons"><i class="fas fa-sort-down"></i></span>
-            <span class="nav-icons"><i class="fas fa-bell"></i></span>
-            <span class="nav-icons"><i class="fas fa-comment-dots"></i></span>
-            <span class="nav-icons"><i class="fas fa-plus"></i></span>
+            <span class="nav-left">
+                <span class="logo"><i class="fab fa-facebook-f"></i></span>
+                <span id="input"><input type="text" placeholder="&#xf002; Search Facebook"></span>
+                <span class="nav-menu"></span>
+                    <span class="nav-menu-item"><i class="fas fa-home"></i></span>
+                    <span class="nav-menu-item"><i class="fas fa-user-friends"></i></span>
+                    <span class="nav-menu-item"><i class="fab fa-youtube"></i></span>
+                    <span class="nav-menu-item"><i class="fas fa-store"></i></span>
+                    <span class="nav-menu-item" id="users"><i class="fas fa-users"></i></span>
+                    <span class="nav-menu-item" id="bars"><i class="fas fa-bars"></i></span>
+                </span>
+            </span>
+            <span class="nav-icons">
+                <span class="nav-icons-item"><i class="fas fa-sort-down"></i></span>
+                <span class="nav-icons-item"><i class="fas fa-bell"></i></span>
+                <span class="nav-icons-item"><i class="fas fa-comment-dots"></i></span>
+                <span class="nav-icons-item"><i class="fas fa-plus"></i></span>
+            </span>
         </nav>
         <header>
             <div class="header-top">
@@ -47,10 +54,10 @@
                     <div class="header-bar">
                         <ul class="header-nav">
                             <li><a href="#" id="active">Timeline</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Friends</a></li>
-                            <li><a href="#">Photos</a></li>
-                            <li><a href="#">Archive</a></li>
+                            <li id="about"><a href="#">About</a></li>
+                            <li id="friends"><a href="#">Friends</a></li>
+                            <li id="photos"><a href="#">Photos</a></li>
+                            <li id="archive"><a href="#">Archive</a></li>
                             <li class="more-pos">
                                 <a class="more" href="#">More <i class="fas fa-sort-down"></i></a>
                                 <div class="dropdown-content">
@@ -158,8 +165,10 @@
                 </aside>
                 <section>
                     <div class="live">
-                        <img src="images/AItCxSs.jpg" alt="Default profile image">
-                        <button>What's on your mind?</button>
+                        <div class="live-top">
+                            <img src="images/AItCxSs.jpg" alt="Default profile image">
+                            <button>What's on your mind?</button>
+                        </div>
                         <hr>
                         <div class="live-bottom">
                             <span class="live-icons"><i class="fas fa-video"></i>&nbsp; Live Video</span>
@@ -167,17 +176,42 @@
                             <span class="live-icons"><i class="fas fa-flag"></i> &nbsp;Life Event</span>
                         </div>
                     </div>
-                        <div class="posts-top">
-                            <span class="h3">Posts</span>
-                            <span class="posts-right">
-                                <span class="header-icons"><i class="fas fa-sliders-h"></i> Filters</span>
-                                <span class="header-icons"><i class="fas fa-cog"></i> Manage Posts</span>
+                    <div class="posts-top">
+                        <span class="h3">Posts</span>
+                        <span class="posts-right">
+                            <span class="header-icons"><i class="fas fa-sliders-h"></i> Filters</span>
+                            <span class="header-icons"><i class="fas fa-cog"></i> Manage Posts</span>
+                        </span>
+                    </div>
+                    <div class="posts-bottom">
+                        <span class="active"><i class="fas fa-bars"></i> List View</span>
+                        <span id="no-padding"><a href="#"><i class="fas fa-th-large"></i> Grid View</a></span>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-head">
+                            <span><img src="images/AItCxSs.jpg" alt="Default profile image"></span>
+                            <span>
+                                <p><a href="#">Facebook Clone</a> updated his profile picture.</p>
+                                <p><a href="#">January 1 at 12:00 PM</a> &bull; <i class="fas fa-globe-africa"></i></p>
+                            </span>
+                            <span>
+                                <i class="fas fa-ellipsis-h"></i>
                             </span>
                         </div>
-                        <div class="posts-bottom">
-                            <span class="active"><i class="fas fa-bars"></i> List View</span>
-                            <span id="no-padding"><a href="#"><i class="fas fa-th-large"></i> Grid View</a></span>
+                        <div class="timeline-picture">
+                            <img src="images/AItCxSs.jpg" alt="Default profile image">
                         </div>
+                        <div class="timeline-options">
+                            <span class="live-icons"><i class="far fa-thumbs-up"></i>&nbsp; Like</span>
+                            <span class="live-icons"><i class="far fa-comment-alt"></i></i>&nbsp; Comment</span>
+                            <span class="live-icons"><i class="far fa-share-square"></i>&nbsp; Share</span>
+                        </div>
+                        <hr>
+                        <div class="timeline-bottom">
+                            <img src="images/AItCxSs.jpg" alt="Default profile image">
+                            <input type="text" placeholder="Write a comment..."></input>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>

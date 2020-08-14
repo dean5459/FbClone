@@ -27,7 +27,14 @@ nav {
     width: 100%;
     padding: 8px;
     margin: auto;
-    z-index: 2;
+    z-index: 3;
+    display: flex;
+}
+
+.nav-left {
+    width: 80%;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -38,15 +45,19 @@ nav {
     border-radius: 50%;
     margin: auto 8px;
 }
-
+#input {
+    width: 30%;
+}
 nav input {
     background-color: #333333;
     border: none;
     padding: 11px;
     border-radius: 50px;
-    width: 270px;
+    width: 100%;
     margin: auto;
     vertical-align: middle;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    color: #9e9e9e;
 }
 
 nav input::placeholder {
@@ -54,17 +65,59 @@ nav input::placeholder {
 }
 
 .nav-menu {
+    display: flex;
+    max-width: 30%;
+}
+.nav-menu-item {
     font-size: 1.4em;
-    padding: 14px 41px;
+    padding: 1% 3.8%;
     margin-right: 5px;
     border-radius: 5px;
 }
 
-.nav-menu:hover {
+.nav-menu-item:hover {
+    transition: background-color 0.1s ease;
     background-color: #333333;
 }
 
+#bars {
+    display: none;
+}
+
+@media screen and (max-width: 1258px) {
+    nav input {
+        width: 35px;
+    }
+ }
+
+@media screen and (max-width: 1098px) {
+   .nav-menu-item#bars {
+        display: inline;
+    }
+
+    .nav-menu-item#users{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+     .nav-menu-item{
+         display: none;
+     }
+
+     .nav-menu-item#bars {
+        display: inline;
+    }
+
+ }
+
 .nav-icons {
+    display: flex;
+    min-width: 240px;
+    overflow: visible;
+}
+
+.nav-icons-item {
     color: #e6e6e6;
     font-size: 1.1em;
     float:right;
@@ -72,6 +125,11 @@ nav input::placeholder {
     margin: auto 8px;
     border-radius: 50%;
     background-color: #3b3b3b;
+}
+
+.nav-icons-item:hover {
+    transition: background-color 0.1s ease;
+    background-color: #4d4d4d;
 }
 /*Header*/
 /*Header-top*/
@@ -90,6 +148,11 @@ header {
 
 .cover {
     position: relative;
+}
+
+.cover-img {
+    display: block;
+    width: 100%;
 }
 
 .edit-cover-btn {
@@ -112,6 +175,7 @@ header {
     right:0;
     bottom: 0;
     width: 170px;
+    z-index: 2;
 }
 
 .profile-pic {
@@ -132,6 +196,7 @@ header {
 }
 
 .camera:hover, .edit-cover-btn:hover {
+    transition: background-color 0.1s ease;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -152,6 +217,12 @@ header {
 
 main .content-container {
     display: flex;
+}
+
+@media screen and (max-width: 906px){
+    main .content-container {
+        display: block;
+    }
 }
 
 .description {
@@ -201,6 +272,7 @@ main .content-container {
 }
 
 .header-nav a:hover, .posts-bottom span a:hover {
+    transition: background-color 0.1s linear;
     background-color: #525252;
 }
 
@@ -227,6 +299,7 @@ main .content-container {
     color: #e6e6e6;
     font-weight: 700;
     padding: 14px 0 10px 0;
+    min-width: 305px;
 }
 
 .header-icons {
@@ -234,6 +307,41 @@ main .content-container {
     padding: 7px 15px;
     background-color: #525252;
     border-radius: 5px;
+}
+
+.header-icons:hover {
+    transition: background-color 0.1s ease;
+    background-color: #5e5e5e;
+}
+
+@media screen and (max-width: 860px){
+    #archive {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 774px){
+    #photos {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 692px){
+    #friends {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 582px){
+    #about {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 504px){
+    #active {
+        display: none;
+    }
 }
 
 .more-pos {
@@ -267,6 +375,7 @@ a.more:active {
 }
 
 .dropdown-content div:hover {
+    transition: background-color 0.1s ease;
     background-color: #525252;
 }
 
@@ -281,6 +390,13 @@ main {
 aside {
     width: 42%;
     margin-right: 14px;
+}
+
+@media screen and (max-width: 906px){
+    aside {
+        width: 100%;
+        display: block;
+    }
 }
 /*Intro*/
 .intro {
@@ -315,6 +431,7 @@ aside {
 }
 
 .intro div:hover {
+    transition: background-color 0.1s ease;
     background-color: #595959;
 }
 /*Photos*/
@@ -360,6 +477,7 @@ aside {
 }
 
 .see-all:hover {
+    transition: background-color 0.1s ease;
     background-color: #4a4a4a;
 }
 /*Friends*/
@@ -414,6 +532,13 @@ aside {
 section {
     width: 58%;
 }
+
+@media screen and (max-width: 906px){
+    section {
+        display: block;
+        width: 100%;
+    }
+}
 /*live*/
 .live {
     background-color: #363636;
@@ -421,6 +546,11 @@ section {
     padding: 12px 15px 8px;
     color: #e6e6e6;
 }
+
+.live-top {
+    display: flex;
+}
+
 .live img {
     width: 40px;
     height: auto;
@@ -462,14 +592,20 @@ section {
 }
 
 .live-bottom {
-    padding: 10px 0;
     text-align: center;
     display: flex;
     justify-content: space-between;
 }
 .live-icons {
+    padding: 10px 0;
+    border-radius: 7px;
     width: 33.3%;
     font-weight: 700;
+}
+
+.live-icons:hover {
+    transition: background-color 0.1s ease;
+    background-color: #4a4a4a;
 }
 
 /*Posts*/
@@ -531,4 +667,127 @@ section {
 
 #no-padding {
     padding: 0;
+}
+
+/*Timeline*/
+ .timeline {
+    margin: 14px 0;
+    background-color: #363636;
+    border-radius: 10px;
+ }
+
+ .timeline span {
+    color: #e6e6e6;
+ }
+
+ .timeline-head {
+    padding: 12px 15px;
+ }
+ .timeline-head span:first-child img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+ }
+
+ .timeline-head span:nth-child(2) {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+ }
+
+ .timeline-head p {
+     margin: 0;
+ }
+
+ .timeline-head span:nth-child(3) {
+     float: right;
+     vertical-align: middle;
+     padding: 10px;
+     border-radius: 50%;
+ }
+
+ .timeline-head span:nth-child(3):hover {
+    transition: background-color 0.1s ease;
+    background-color: #4a4a4a;
+ }
+
+ .timeline-head span:nth-child(2) p:first-child a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-weight: 700;
+ }
+
+ .timeline-head span:nth-child(2) p:last-child a {
+    color: #e6e6e6;
+    text-decoration: none;
+ }
+
+ .timeline-head a:hover {
+     text-decoration: underline;
+ }
+
+ .timeline-head span:nth-child(2) p:first-child {
+     font-size: 0.95em;
+     margin-bottom: 5px;
+ }
+
+ .timeline-head span:nth-child(2) p:last-child {
+     font-size: 0.85em;
+ }
+
+ .timeline-picture {
+    background: url(https://cdn.studyinternational.com/news/wp-content/uploads/2020/06/ghsm-library1-hero-940x352.jpg);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: top;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+ }
+
+ .timeline-picture img {
+     margin: 20px auto;
+     border-radius: 50%;
+     border: 5px solid #363636;
+     width: 400px;
+     height: auto;
+}
+
+.timeline-options {
+    padding: 10px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline hr {
+    width: 93%;
+    margin: 0 auto;
+}
+
+.timeline-bottom {
+    padding: 12px 15px 12px;
+}
+
+.timeline-bottom img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.timeline-bottom input {
+    display: inline-block;
+    width: auto;
+    border-radius: 50px;
+    border: none;
+    background-color: #525252;
+    color: #c7c7c7; 
+    padding: 8px;
+    font-size: 1.1em;
+    width: 88%;
+    margin-left: 7px;
+    text-align: left;
 }
